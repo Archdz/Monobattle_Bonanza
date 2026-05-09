@@ -1,2 +1,7 @@
 ﻿CustomScript/Name/lib_32AF1ADC_0A803417=Untitled Custom Script 001
 Library/Name/32AF1ADC=Library
+Library/Name/DA1C05C8=BasicMonobattle
+Trigger/Name/lib_DA1C05C8_33C8D97A=Losowanie
+Trigger/Name/lib_DA1C05C8_90F93F2F=Inicjalizacja
+Variable/Name/lib_DA1C05C8_5BE0E365=TerranPool
+Variable/Name/lib_DA1C05C8_B24CA5C0=Rzut

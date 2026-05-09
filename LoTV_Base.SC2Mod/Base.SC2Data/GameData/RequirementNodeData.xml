@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!-- ==================================================================== -->
+    <!-- WĘZŁY LOGICZNE (AND) - łączą kilka warunków                          -->
+    <!-- ==================================================================== -->
+    <CRequirementAnd id="AndCountUnitBarracksTechLabCompleteOnlyCountUpgradePriviligeMarauderCompleteOnly">
+        <OperandArray value="CountUnitBarracksTechLabCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeMarauderCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitBarracksTechLabCompleteOnlyCountUnitGhostAcademyCompleteOnlyCountUpgradePriviligeGhostCompleteOnly">
+        <OperandArray value="CountUnitBarracksTechLabCompleteOnly"/>
+        <OperandArray value="CountUnitGhostAcademyCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeGhostCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitArmoryCompleteOnlyCountUpgradePriviligeHellbatCompleteOnly">
+        <OperandArray value="CountUnitArmoryCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeHellbatCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitFactoryTechLabCompleteOnlyCountUpgradePriviligeCycloneCompleteOnly">
+        <OperandArray value="CountUnitFactoryTechLabCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeCycloneCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitFactoryTechLabCompleteOnlyCountUpgradePriviligeSiegeTankCompleteOnly">
+        <OperandArray value="CountUnitFactoryTechLabCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeSiegeTankCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitFactoryTechLabCompleteOnlyCountUnitArmoryCompleteOnlyCountUpgradePriviligeThorCompleteOnly">
+        <OperandArray value="CountUnitFactoryTechLabCompleteOnly"/>
+        <OperandArray value="CountUnitArmoryCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeThorCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitStarportTechLabCompleteOnlyCountUpgradePriviligeRavenCompleteOnly">
+        <OperandArray value="CountUnitStarportTechLabCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeRavenCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitStarportTechLabCompleteOnlyCountUpgradePriviligeBansheeCompleteOnly">
+        <OperandArray value="CountUnitStarportTechLabCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeBansheeCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitStarportTechLabCompleteOnlyCountUnitFusionCoreCompleteOnlyCountUpgradePriviligeBattlecruiserCompleteOnly">
+        <OperandArray value="CountUnitStarportTechLabCompleteOnly"/>
+        <OperandArray value="CountUnitFusionCoreCompleteOnly"/>
+        <OperandArray value="CountUpgradePriviligeBattlecruiserCompleteOnly"/>
+    </CRequirementAnd>
+    <!-- ==================================================================== -->
+    <!-- WĘZŁY BUDYNKÓW / DODATKÓW (CountUnit)                                -->
+    <!-- ==================================================================== -->
+    <CRequirementCountUnit id="CountUnitBarracksTechLabCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BarracksTechLab" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitFactoryTechLabCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FactoryTechLab" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitStarportTechLabCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StarportTechLab" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitGhostAcademyCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="GhostAcademy" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitArmoryCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/CountUnitArmoryCompleteOnly"/>
+    </CRequirementCountUnit>
+    <!-- ==================================================================== -->
+    <!-- WĘZŁY ULEPSZEŃ (CountUpgrade)                                        -->
+    <!-- ==================================================================== -->
+    <CRequirementCountUpgrade id="CountUpgradePriviligeMarineCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeMarine" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeMarauderCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeMarauder" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeReaperCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeReaper" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeGhostCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeGhost" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeHellionCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeHellion" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeHellbatCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeHellbat" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeWidowMineCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeWidowMine" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeCycloneCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeCyclone" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeSiegeTankCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeSiegeTank" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeThorCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeThor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeVikingCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeViking" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeMedivacCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeMedivac" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeLiberatorCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeLiberator" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeRavenCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeRaven" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeBansheeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeBanshee" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePriviligeBattlecruiserCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PriviligeBattlecruiser" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+</Catalog>

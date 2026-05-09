@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!-- Domyślne -->
+    <CRequirement id="NeedDefault">
+        <EditorCategories value="TechType:Upgrade"/>
+    </CRequirement>
+    <!-- ========================================== -->
+    <!-- PIECHOTA (Barracks)                  -->
+    <!-- ========================================== -->
+    <CRequirement id="NeedMarine">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradePriviligeMarineCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedMarauder">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="AndCountUnitBarracksTechLabCompleteOnlyCountUpgradePriviligeMarauderCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedReaper">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradePriviligeReaperCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedGhost">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <!-- Ghost wymaga Tech Labu oraz Ghost Academy -->
+        <NodeArray index="Use" Link="AndCountUnitBarracksTechLabCompleteOnlyCountUnitGhostAcademyCompleteOnlyCountUpgradePriviligeGhostCompleteOnly"/>
+    </CRequirement>
+    <!-- ========================================== -->
+    <!-- POJAZDY (Factory)                          -->
+    <!-- ========================================== -->
+    <CRequirement id="NeedHellion">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradePriviligeHellionCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedHellbat">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <!-- Hellbat wymaga Zbrojowni (Armory) -->
+        <NodeArray index="Use" Link="AndCountUnitArmoryCompleteOnlyCountUpgradePriviligeHellbatCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedWidowMine">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradePriviligeWidowMineCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedCyclone">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="AndCountUnitFactoryTechLabCompleteOnlyCountUpgradePriviligeCycloneCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedSiegeTank">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="AndCountUnitFactoryTechLabCompleteOnlyCountUpgradePriviligeSiegeTankCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedThor">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <!-- Thor wymaga Tech Labu oraz Zbrojowni (Armory) -->
+        <NodeArray index="Use" Link="AndCountUnitFactoryTechLabCompleteOnlyCountUnitArmoryCompleteOnlyCountUpgradePriviligeThorCompleteOnly"/>
+    </CRequirement>
+    <!-- ========================================== -->
+    <!-- STATKI POWIETRZNE (Starport)               -->
+    <!-- ========================================== -->
+    <CRequirement id="NeedViking">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradePriviligeVikingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedMedivac">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradePriviligeMedivacCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedLiberator">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradePriviligeLiberatorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedRaven">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="AndCountUnitStarportTechLabCompleteOnlyCountUpgradePriviligeRavenCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedBanshee">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <NodeArray index="Use" Link="AndCountUnitStarportTechLabCompleteOnlyCountUpgradePriviligeBansheeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NeedBattlecruiser">
+        <EditorCategories value="TechType:Upgrade,Race:Terran"/>
+        <!-- Battlecruiser wymaga Tech Labu oraz Rdzenia Fuzyjnego (Fusion Core) -->
+        <NodeArray index="Use" Link="AndCountUnitStarportTechLabCompleteOnlyCountUnitFusionCoreCompleteOnlyCountUpgradePriviligeBattlecruiserCompleteOnly"/>
+    </CRequirement>
+</Catalog>

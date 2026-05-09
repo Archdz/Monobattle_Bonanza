@@ -1,0 +1,113 @@
+include "TriggerLibs/NativeLib"
+
+include "LibDA1C05C8_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: BasicMonobattle
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libDA1C05C8_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Variable Initialization
+bool libDA1C05C8_InitVariables_completed = false;
+
+void libDA1C05C8_InitVariables () {
+    if (libDA1C05C8_InitVariables_completed) {
+        return;
+    }
+
+    libDA1C05C8_InitVariables_completed = true;
+
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Inicjalizacja
+//--------------------------------------------------------------------------------------------------
+bool libDA1C05C8_gt_Inicjalizacja_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libDA1C05C8_gv_terranPool[0] = "PriviligeMarine";
+    libDA1C05C8_gv_terranPool[1] = "PriviligeMarauder";
+    libDA1C05C8_gv_terranPool[2] = "PriviligeReaper";
+    libDA1C05C8_gv_terranPool[3] = "PriviligeGhost";
+    libDA1C05C8_gv_terranPool[4] = "PriviligeHellion";
+    libDA1C05C8_gv_terranPool[5] = "PriviligeHellbat";
+    libDA1C05C8_gv_terranPool[6] = "PriviligeWidowMine";
+    libDA1C05C8_gv_terranPool[7] = "PriviligeCyclone";
+    libDA1C05C8_gv_terranPool[8] = "PriviligeSiegeTank";
+    libDA1C05C8_gv_terranPool[9] = "PriviligeThor";
+    libDA1C05C8_gv_terranPool[10] = "PriviligeViking";
+    libDA1C05C8_gv_terranPool[11] = "PriviligeMedivac";
+    libDA1C05C8_gv_terranPool[12] = "PriviligeLiberator";
+    libDA1C05C8_gv_terranPool[13] = "PriviligeRaven";
+    libDA1C05C8_gv_terranPool[14] = "PriviligeBanshee";
+    libDA1C05C8_gv_terranPool[15] = "PriviligeBattlecruiser";
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libDA1C05C8_gt_Inicjalizacja_Init () {
+    libDA1C05C8_gt_Inicjalizacja = TriggerCreate("libDA1C05C8_gt_Inicjalizacja_Func");
+    TriggerAddEventMapInit(libDA1C05C8_gt_Inicjalizacja);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Losowanie
+//--------------------------------------------------------------------------------------------------
+bool libDA1C05C8_gt_Losowanie_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto196910E5_g;
+    int auto196910E5_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto196910E5_g = PlayerGroupAll();
+    auto196910E5_var = -1;
+    while (true) {
+        auto196910E5_var = PlayerGroupNextPlayer(auto196910E5_g, auto196910E5_var);
+        if (auto196910E5_var < 0) { break; }
+        libDA1C05C8_gv_rzut = RandomInt(0, 15);
+        libNtve_gf_SetUpgradeLevelForPlayer(auto196910E5_var, libDA1C05C8_gv_terranPool[libDA1C05C8_gv_rzut], 1);
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_DA1C05C8_74D42A85") + IntToText(libDA1C05C8_gv_rzut)));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libDA1C05C8_gt_Losowanie_Init () {
+    libDA1C05C8_gt_Losowanie = TriggerCreate("libDA1C05C8_gt_Losowanie_Func");
+    TriggerAddEventMapInit(libDA1C05C8_gt_Losowanie);
+}
+
+void libDA1C05C8_InitTriggers () {
+    libDA1C05C8_gt_Inicjalizacja_Init();
+    libDA1C05C8_gt_Losowanie_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libDA1C05C8_InitLib_completed = false;
+
+void libDA1C05C8_InitLib () {
+    if (libDA1C05C8_InitLib_completed) {
+        return;
+    }
+
+    libDA1C05C8_InitLib_completed = true;
+
+    libDA1C05C8_InitLibraries();
+    libDA1C05C8_InitVariables();
+    libDA1C05C8_InitTriggers();
+}
+
