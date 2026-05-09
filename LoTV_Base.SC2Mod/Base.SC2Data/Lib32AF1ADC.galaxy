@@ -36,7 +36,7 @@ void lib32AF1ADC_InitCustomScript () {
 //--------------------------------------------------------------------------------------------------
 // Trigger: Untitled Trigger 001
 //--------------------------------------------------------------------------------------------------
-bool lib32AF1ADC_gt_UntitledTrigger001_Func (bool testConds, bool runActions) {
+bool lib32AF1ADC_gt_Randomize_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     playergroup auto752286AD_g;
     int auto752286AD_var;
@@ -59,81 +59,13 @@ bool lib32AF1ADC_gt_UntitledTrigger001_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib32AF1ADC_gt_UntitledTrigger001_Init () {
-    lib32AF1ADC_gt_UntitledTrigger001 = TriggerCreate("lib32AF1ADC_gt_UntitledTrigger001_Func");
-    TriggerAddEventMapInit(lib32AF1ADC_gt_UntitledTrigger001);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Inicjalizacja
-//--------------------------------------------------------------------------------------------------
-bool lib32AF1ADC_gt_Inicjalizacja_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    lib32AF1ADC_gv_terranPool[0] = "PriviligeMarine";
-    lib32AF1ADC_gv_terranPool[1] = "PriviligeMarauder";
-    lib32AF1ADC_gv_terranPool[2] = "PriviligeReaper";
-    lib32AF1ADC_gv_terranPool[3] = "PriviligeGhost";
-    lib32AF1ADC_gv_terranPool[4] = "PriviligeHellion";
-    lib32AF1ADC_gv_terranPool[5] = "PriviligeHellbat";
-    lib32AF1ADC_gv_terranPool[6] = "PriviligeWidowMine";
-    lib32AF1ADC_gv_terranPool[7] = "PriviligeCyclone";
-    lib32AF1ADC_gv_terranPool[8] = "PriviligeSiegeTank";
-    lib32AF1ADC_gv_terranPool[9] = "PriviligeThor";
-    lib32AF1ADC_gv_terranPool[10] = "PriviligeViking";
-    lib32AF1ADC_gv_terranPool[11] = "PriviligeMedivac";
-    lib32AF1ADC_gv_terranPool[12] = "PriviligeLiberator";
-    lib32AF1ADC_gv_terranPool[13] = "PriviligeRaven";
-    lib32AF1ADC_gv_terranPool[14] = "PriviligeBanshee";
-    lib32AF1ADC_gv_terranPool[15] = "PriviligeBattlecruiser";
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib32AF1ADC_gt_Inicjalizacja_Init () {
-    lib32AF1ADC_gt_Inicjalizacja = TriggerCreate("lib32AF1ADC_gt_Inicjalizacja_Func");
-    TriggerAddEventMapInit(lib32AF1ADC_gt_Inicjalizacja);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Losowanie
-//--------------------------------------------------------------------------------------------------
-bool lib32AF1ADC_gt_Losowanie_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    playergroup auto6BE4D78E_g;
-    int auto6BE4D78E_var;
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    auto6BE4D78E_g = PlayerGroupAll();
-    auto6BE4D78E_var = -1;
-    while (true) {
-        auto6BE4D78E_var = PlayerGroupNextPlayer(auto6BE4D78E_g, auto6BE4D78E_var);
-        if (auto6BE4D78E_var < 0) { break; }
-        lib32AF1ADC_gv_rzut = RandomInt(0, 15);
-        libNtve_gf_SetUpgradeLevelForPlayer(auto6BE4D78E_var, lib32AF1ADC_gv_terranPool[lib32AF1ADC_gv_rzut], 1);
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_32AF1ADC_6CB03CC1") + IntToText(lib32AF1ADC_gv_rzut)));
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib32AF1ADC_gt_Losowanie_Init () {
-    lib32AF1ADC_gt_Losowanie = TriggerCreate("lib32AF1ADC_gt_Losowanie_Func");
-    TriggerAddEventMapInit(lib32AF1ADC_gt_Losowanie);
+void lib32AF1ADC_gt_Randomize_Init () {
+    lib32AF1ADC_gt_Randomize = TriggerCreate("lib32AF1ADC_gt_Randomize_Func");
+    TriggerAddEventMapInit(lib32AF1ADC_gt_Randomize);
 }
 
 void lib32AF1ADC_InitTriggers () {
-    lib32AF1ADC_gt_UntitledTrigger001_Init();
-    lib32AF1ADC_gt_Inicjalizacja_Init();
-    lib32AF1ADC_gt_Losowanie_Init();
+    lib32AF1ADC_gt_Randomize_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

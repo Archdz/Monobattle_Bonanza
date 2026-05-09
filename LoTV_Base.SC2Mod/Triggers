@@ -2,42 +2,19 @@
 <TriggerData>
     <Library Id="32AF1ADC">
         <Root>
-            <Item Type="Variable" Library="32AF1ADC" Id="EFD30413"/>
-            <Item Type="Variable" Library="32AF1ADC" Id="3DDA6780"/>
+            <Item Type="Category" Library="32AF1ADC" Id="C8438597"/>
             <Item Type="CustomScript" Library="32AF1ADC" Id="0A803417"/>
-            <Item Type="Trigger" Library="32AF1ADC" Id="DCE9643E"/>
-            <Item Type="Category" Library="32AF1ADC" Id="3F3A1D8F"/>
         </Root>
-        <Element Type="Variable" Id="EFD30413">
-            <VariableType>
-                <Type Value="gamelink"/>
-                <GameType Value="Unit"/>
-                <ArraySize Dim="0" Value="4"/>
-            </VariableType>
-            <Value Type="Param" Library="32AF1ADC" Id="6CA5634B"/>
+        <Element Type="Category" Id="C8438597">
+            <Item Type="Category" Library="32AF1ADC" Id="D521FB7D"/>
         </Element>
-        <Element Type="Param" Id="6CA5634B">
-            <Preset Type="PresetValue" Library="Ntve" Id="C9DCA6C0"/>
-        </Element>
-        <Element Type="Variable" Id="3DDA6780">
-            <VariableType>
-                <Type Value="int"/>
-            </VariableType>
-            <Value Type="Param" Library="32AF1ADC" Id="0E657EAA"/>
-        </Element>
-        <Element Type="Param" Id="0E657EAA">
-            <Value>0</Value>
-            <ValueType Type="int"/>
-        </Element>
-        <Element Type="CustomScript" Id="0A803417">
-            <Identifier>Bootstrap</Identifier>
-            <ScriptCode>
-                include &quot;scripts/main&quot;
-            </ScriptCode>
-            <InitFunc>main</InitFunc>
+        <Element Type="Category" Id="D521FB7D">
+            <Item Type="Trigger" Library="32AF1ADC" Id="DCE9643E"/>
+            <Item Type="Variable" Library="32AF1ADC" Id="3DDA6780"/>
+            <Item Type="Variable" Library="32AF1ADC" Id="EFD30413"/>
         </Element>
         <Element Type="Trigger" Id="DCE9643E">
-            <Identifier>UntitledTrigger001</Identifier>
+            <Identifier>Randomize</Identifier>
             <Event Type="FunctionCall" Library="32AF1ADC" Id="EF29E615"/>
             <Action Type="FunctionCall" Library="32AF1ADC" Id="752286AD"/>
         </Element>
@@ -130,181 +107,33 @@
         <Element Type="Param" Id="56497AB6">
             <Variable Type="Variable" Library="32AF1ADC" Id="3DDA6780"/>
         </Element>
-        <Element Type="Category" Id="3F3A1D8F">
-            <Identifier>Unit_Randomizer</Identifier>
-            <Item Type="Variable" Library="32AF1ADC" Id="DB1144BA"/>
-            <Item Type="Variable" Library="32AF1ADC" Id="BB3E16C1"/>
-            <Item Type="Trigger" Library="32AF1ADC" Id="10125603"/>
-            <Item Type="Trigger" Library="32AF1ADC" Id="A6881016"/>
-        </Element>
-        <Element Type="Variable" Id="DB1144BA">
-            <VariableType>
-                <Type Value="gamelink"/>
-                <GameType Value="Upgrade"/>
-                <ArraySize Dim="0" Value="16"/>
-            </VariableType>
-            <Value Type="Param" Library="32AF1ADC" Id="CA1C0AE0"/>
-        </Element>
-        <Element Type="Param" Id="CA1C0AE0">
-            <Preset Type="PresetValue" Library="Ntve" Id="C9DCA6C0"/>
-        </Element>
-        <Element Type="Variable" Id="BB3E16C1">
+        <Element Type="Variable" Id="3DDA6780">
             <VariableType>
                 <Type Value="int"/>
             </VariableType>
-            <Value Type="Param" Library="32AF1ADC" Id="81AA6D94"/>
+            <Value Type="Param" Library="32AF1ADC" Id="0E657EAA"/>
         </Element>
-        <Element Type="Param" Id="81AA6D94">
+        <Element Type="Param" Id="0E657EAA">
             <Value>0</Value>
             <ValueType Type="int"/>
         </Element>
-        <Element Type="Trigger" Id="10125603">
-            <Event Type="FunctionCall" Library="32AF1ADC" Id="C5F19D62"/>
-            <Action Type="FunctionCall" Library="32AF1ADC" Id="DD9FC5A3"/>
+        <Element Type="Variable" Id="EFD30413">
+            <VariableType>
+                <Type Value="gamelink"/>
+                <GameType Value="Unit"/>
+                <ArraySize Dim="0" Value="4"/>
+            </VariableType>
+            <Value Type="Param" Library="32AF1ADC" Id="6CA5634B"/>
         </Element>
-        <Element Type="FunctionCall" Id="C5F19D62">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        <Element Type="Param" Id="6CA5634B">
+            <Preset Type="PresetValue" Library="Ntve" Id="C9DCA6C0"/>
         </Element>
-        <Element Type="FunctionCall" Id="DD9FC5A3">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000123"/>
+        <Element Type="CustomScript" Id="0A803417">
+            <Identifier>Bootstrap</Identifier>
             <ScriptCode>
-                lib32AF1ADC_gv_terranPool[0] = &quot;PriviligeMarine&quot;;
-                lib32AF1ADC_gv_terranPool[1] = &quot;PriviligeMarauder&quot;;
-                lib32AF1ADC_gv_terranPool[2] = &quot;PriviligeReaper&quot;;
-                lib32AF1ADC_gv_terranPool[3] = &quot;PriviligeGhost&quot;;
-                lib32AF1ADC_gv_terranPool[4] = &quot;PriviligeHellion&quot;;
-                lib32AF1ADC_gv_terranPool[5] = &quot;PriviligeHellbat&quot;;
-                lib32AF1ADC_gv_terranPool[6] = &quot;PriviligeWidowMine&quot;;
-                lib32AF1ADC_gv_terranPool[7] = &quot;PriviligeCyclone&quot;;
-                lib32AF1ADC_gv_terranPool[8] = &quot;PriviligeSiegeTank&quot;;
-                lib32AF1ADC_gv_terranPool[9] = &quot;PriviligeThor&quot;;
-                lib32AF1ADC_gv_terranPool[10] = &quot;PriviligeViking&quot;;
-                lib32AF1ADC_gv_terranPool[11] = &quot;PriviligeMedivac&quot;;
-                lib32AF1ADC_gv_terranPool[12] = &quot;PriviligeLiberator&quot;;
-                lib32AF1ADC_gv_terranPool[13] = &quot;PriviligeRaven&quot;;
-                lib32AF1ADC_gv_terranPool[14] = &quot;PriviligeBanshee&quot;;
-                lib32AF1ADC_gv_terranPool[15] = &quot;PriviligeBattlecruiser&quot;;
+                include &quot;scripts/main&quot;
             </ScriptCode>
-        </Element>
-        <Element Type="Trigger" Id="A6881016">
-            <Event Type="FunctionCall" Library="32AF1ADC" Id="F7648B56"/>
-            <Action Type="FunctionCall" Library="32AF1ADC" Id="6BE4D78E"/>
-        </Element>
-        <Element Type="FunctionCall" Id="F7648B56">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
-        </Element>
-        <Element Type="FunctionCall" Id="6BE4D78E">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="5084725D"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="40B47A39"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="C99BF475"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="F20F9564"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="A5CDB8EB"/>
-        </Element>
-        <Element Type="Param" Id="40B47A39">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="42AB3EFD"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="0E2A22EC"/>
-        </Element>
-        <Element Type="FunctionCall" Id="0E2A22EC">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
-        </Element>
-        <Element Type="FunctionCall" Id="C99BF475">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
-            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="DEA91B62"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="1F3E687B"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="EFBDB499"/>
-        </Element>
-        <Element Type="Param" Id="1F3E687B">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
-            <Variable Type="Variable" Library="32AF1ADC" Id="BB3E16C1"/>
-        </Element>
-        <Element Type="Param" Id="EFBDB499">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="16313FF5"/>
-        </Element>
-        <Element Type="FunctionCall" Id="16313FF5">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000195"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="1E684B5D"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="C4D96617"/>
-        </Element>
-        <Element Type="Param" Id="1E684B5D">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000329"/>
-            <Value>0</Value>
-            <ValueType Type="int"/>
-        </Element>
-        <Element Type="Param" Id="C4D96617">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000330"/>
-            <Value>15</Value>
-            <ValueType Type="int"/>
-        </Element>
-        <Element Type="FunctionCall" Id="F20F9564">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9F8EF8FB"/>
-            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="DEA91B62"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="A2099CCE"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="56A37853"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="A5670E00"/>
-        </Element>
-        <Element Type="Param" Id="A2099CCE">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="C7188352"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="CAE3EC18"/>
-        </Element>
-        <Element Type="FunctionCall" Id="CAE3EC18">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="8570CA61"/>
-        </Element>
-        <Element Type="Param" Id="56A37853">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="3BFEECBB"/>
-            <Value>1</Value>
-            <ValueType Type="int"/>
-        </Element>
-        <Element Type="Param" Id="A5670E00">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="7E5035EE"/>
-            <Variable Type="Variable" Library="32AF1ADC" Id="DB1144BA"/>
-            <Array Type="Param" Library="32AF1ADC" Id="2FD7BC10"/>
-        </Element>
-        <Element Type="Param" Id="2FD7BC10">
-            <Variable Type="Variable" Library="32AF1ADC" Id="BB3E16C1"/>
-        </Element>
-        <Element Type="FunctionCall" Id="A5CDB8EB">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="0366EE04"/>
-            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="DEA91B62"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="479D50A0"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="7EDD4B7A"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="4A5A3529"/>
-        </Element>
-        <Element Type="Param" Id="479D50A0">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="0D120C33"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="BE02F3C0"/>
-        </Element>
-        <Element Type="FunctionCall" Id="BE02F3C0">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
-        </Element>
-        <Element Type="Param" Id="7EDD4B7A">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="A4C19F41"/>
-            <Preset Type="PresetValue" Library="Ntve" Id="875889C8"/>
-        </Element>
-        <Element Type="Param" Id="4A5A3529">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="78A54B52"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="8049DC74"/>
-        </Element>
-        <Element Type="FunctionCall" Id="8049DC74">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="86E40471"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="6CB03CC1"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="C7666D4B"/>
-        </Element>
-        <Element Type="Param" Id="6CB03CC1">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="174E8B8C"/>
-            <ValueType Type="text"/>
-        </Element>
-        <Element Type="Param" Id="C7666D4B">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="BD48D330"/>
-            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="183ACAEE"/>
-        </Element>
-        <Element Type="FunctionCall" Id="183ACAEE">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="EAC465A1"/>
-            <Parameter Type="Param" Library="32AF1ADC" Id="11BD2194"/>
-        </Element>
-        <Element Type="Param" Id="11BD2194">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="D125FE97"/>
-            <Variable Type="Variable" Library="32AF1ADC" Id="BB3E16C1"/>
+            <InitFunc>main</InitFunc>
         </Element>
     </Library>
 </TriggerData>

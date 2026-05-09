@@ -4,15 +4,11 @@ include "TriggerLibs/natives"
 // Library: Library
 //--------------------------------------------------------------------------------------------------
 // Variable Declarations
-string[5] lib32AF1ADC_gv_terranUnits;
 int lib32AF1ADC_gv_rzut2;
-string[17] lib32AF1ADC_gv_terranPool;
-int lib32AF1ADC_gv_rzut;
+string[5] lib32AF1ADC_gv_terranUnits;
 
 // Trigger Declarations
-trigger lib32AF1ADC_gt_UntitledTrigger001;
-trigger lib32AF1ADC_gt_Inicjalizacja;
-trigger lib32AF1ADC_gt_Losowanie;
+trigger lib32AF1ADC_gt_Randomize;
 
 // Library Initialization
 void lib32AF1ADC_InitVariables ();
