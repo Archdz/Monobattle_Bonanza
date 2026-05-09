@@ -1,0 +1,7 @@
+void initialize_terran () {
+	lib32AF1ADC_gv_terranUnits[0]  = "Marine";
+    lib32AF1ADC_gv_terranUnits[1]  = "Marauder";
+    lib32AF1ADC_gv_terranUnits[2]  = "Reaper";
+    lib32AF1ADC_gv_terranUnits[3]  = "Ghost";
+	UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("iNICJALIZACJA"));
+}

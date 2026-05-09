@@ -1,5 +1,7 @@
+include "scripts/Initialize_terran_pool"
 
 void main() {
+    initialize_terran ();
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Script is working."));
 }
 

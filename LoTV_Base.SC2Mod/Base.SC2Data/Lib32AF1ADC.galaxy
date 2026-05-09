@@ -51,8 +51,9 @@ bool lib32AF1ADC_gt_UntitledTrigger001_Func (bool testConds, bool runActions) {
     while (true) {
         auto752286AD_var = PlayerGroupNextPlayer(auto752286AD_g, auto752286AD_var);
         if (auto752286AD_var < 0) { break; }
+        lib32AF1ADC_gv_rzut2 = RandomInt(0, 3);
         TechTreeRestrictionsEnable(auto752286AD_var, true);
-        TechTreeUnitAllow(auto752286AD_var, "Marine", true);
+        TechTreeUnitAllow(auto752286AD_var, lib32AF1ADC_gv_terranUnits[lib32AF1ADC_gv_rzut2], true);
     }
     return true;
 }
