@@ -54,6 +54,7 @@ bool lib32AF1ADC_gt_Randomize_Func (bool testConds, bool runActions) {
         lib32AF1ADC_gv_rzut2 = RandomInt(0, 3);
         TechTreeRestrictionsEnable(auto752286AD_var, true);
         TechTreeUnitAllow(auto752286AD_var, lib32AF1ADC_gv_terranUnits[lib32AF1ADC_gv_rzut2], true);
+        TechTreeUnitAllow(auto752286AD_var, "MissileTurret", true);
     }
     return true;
 }

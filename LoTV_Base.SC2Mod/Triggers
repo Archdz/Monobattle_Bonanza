@@ -27,6 +27,7 @@
             <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="313FEC70"/>
             <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="71B46F81"/>
             <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="6ED6C83D"/>
+            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="387FAFCD"/>
         </Element>
         <Element Type="Param" Id="EAA2DBB2">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="42AB3EFD"/>
@@ -106,6 +107,30 @@
         </Element>
         <Element Type="Param" Id="56497AB6">
             <Variable Type="Variable" Library="32AF1ADC" Id="3DDA6780"/>
+        </Element>
+        <Element Type="FunctionCall" Id="387FAFCD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="51A273F5"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="DEA91B62"/>
+            <Parameter Type="Param" Library="32AF1ADC" Id="1AD0687F"/>
+            <Parameter Type="Param" Library="32AF1ADC" Id="B9CF51F8"/>
+            <Parameter Type="Param" Library="32AF1ADC" Id="94805D76"/>
+        </Element>
+        <Element Type="Param" Id="1AD0687F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B15D29C1"/>
+            <FunctionCall Type="FunctionCall" Library="32AF1ADC" Id="571C227A"/>
+        </Element>
+        <Element Type="FunctionCall" Id="571C227A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="8570CA61"/>
+        </Element>
+        <Element Type="Param" Id="B9CF51F8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C26556EA"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000106"/>
+        </Element>
+        <Element Type="Param" Id="94805D76">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BC66D9AD"/>
+            <Value>MissileTurret</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Unit"/>
         </Element>
         <Element Type="Variable" Id="3DDA6780">
             <VariableType>
