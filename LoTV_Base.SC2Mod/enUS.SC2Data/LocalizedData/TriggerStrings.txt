@@ -2,6 +2,7 @@
 Category/Name/lib_32AF1ADC_D521FB7D=Terran_Randomizer
 CustomScript/Name/lib_32AF1ADC_0A803417=Bootstrap
 Library/Name/32AF1ADC=Library
+Trigger/Name/lib_32AF1ADC_D995B985=Untitled Trigger 002
 Trigger/Name/lib_32AF1ADC_DCE9643E=Untitled Trigger 001
 Variable/Name/lib_32AF1ADC_3DDA6780=Rzut2
 Variable/Name/lib_32AF1ADC_EFD30413=TerranUnits

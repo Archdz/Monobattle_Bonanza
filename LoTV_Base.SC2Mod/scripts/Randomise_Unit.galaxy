@@ -14,11 +14,15 @@ void RandomizeMonobattle() {
     while (p >= 0) {
         // 1. Losujemy indeks (wykorzystując stałą wielkość tablicy)
         rzut = RandomInt(0, 3);
-        
+
         // 2. Logika Monobattle dla konkretnego gracza 'p'
         TechTreeRestrictionsEnable(p, true);
         TechTreeUnitAllow(p, TerranPool[rzut], true);
-        
+
+        // Pozwól na turret, orbital command zawsze       
+        TechTreeUnitAllow(p,"MissileTurret", true);
+        TechTreeUpgradeAllow(p,"TerranInfantryWeaponsLevel1",true);
+
         // Debug/Info: Wiadomość tylko do wylosowanego gracza
         UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
 
