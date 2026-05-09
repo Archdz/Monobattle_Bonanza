@@ -34,6 +34,36 @@ void lib32AF1ADC_InitCustomScript () {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Untitled Trigger 001
+//--------------------------------------------------------------------------------------------------
+bool lib32AF1ADC_gt_UntitledTrigger001_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto752286AD_g;
+    int auto752286AD_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto752286AD_g = PlayerGroupAll();
+    auto752286AD_var = -1;
+    while (true) {
+        auto752286AD_var = PlayerGroupNextPlayer(auto752286AD_g, auto752286AD_var);
+        if (auto752286AD_var < 0) { break; }
+        TechTreeRestrictionsEnable(auto752286AD_var, true);
+        TechTreeUnitAllow(auto752286AD_var, "Marine", true);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib32AF1ADC_gt_UntitledTrigger001_Init () {
+    lib32AF1ADC_gt_UntitledTrigger001 = TriggerCreate("lib32AF1ADC_gt_UntitledTrigger001_Func");
+    TriggerAddEventMapInit(lib32AF1ADC_gt_UntitledTrigger001);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Inicjalizacja
 //--------------------------------------------------------------------------------------------------
 bool lib32AF1ADC_gt_Inicjalizacja_Func (bool testConds, bool runActions) {
@@ -100,6 +130,7 @@ void lib32AF1ADC_gt_Losowanie_Init () {
 }
 
 void lib32AF1ADC_InitTriggers () {
+    lib32AF1ADC_gt_UntitledTrigger001_Init();
     lib32AF1ADC_gt_Inicjalizacja_Init();
     lib32AF1ADC_gt_Losowanie_Init();
 }

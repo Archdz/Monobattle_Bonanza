@@ -3,5 +3,6 @@ CustomScript/Name/lib_32AF1ADC_0A803417=Bootstrap
 Library/Name/32AF1ADC=Library
 Trigger/Name/lib_32AF1ADC_10125603=Inicjalizacja
 Trigger/Name/lib_32AF1ADC_A6881016=Losowanie
+Trigger/Name/lib_32AF1ADC_DCE9643E=Untitled Trigger 001
 Variable/Name/lib_32AF1ADC_BB3E16C1=Rzut
 Variable/Name/lib_32AF1ADC_DB1144BA=TerranPool

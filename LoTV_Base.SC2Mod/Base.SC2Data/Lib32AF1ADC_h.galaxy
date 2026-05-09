@@ -8,6 +8,7 @@ string[17] lib32AF1ADC_gv_terranPool;
 int lib32AF1ADC_gv_rzut;
 
 // Trigger Declarations
+trigger lib32AF1ADC_gt_UntitledTrigger001;
 trigger lib32AF1ADC_gt_Inicjalizacja;
 trigger lib32AF1ADC_gt_Losowanie;
 
