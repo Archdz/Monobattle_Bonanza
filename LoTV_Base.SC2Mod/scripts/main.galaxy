@@ -2,12 +2,15 @@ include "scripts/Initialize_terran_pool"
 include "scripts/Randomise_Unit"
 void main() {
 
-
+    trigger t;
 
     initialize_terran ();
+    Wait(1, c_timeGame);
     RandomizeMonobattle();
 
-    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Script is working."));
+    t = TriggerCreate("CommandReroll");
+    
+    TriggerAddEventChatMessage(t, c_playerAny, "-reroll", false);
 }
 
 

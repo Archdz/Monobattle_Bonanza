@@ -1,11 +1,29 @@
-const int MAX_UNITS =4; // Tu zmienisz limit dla wszystkich ras na raz
+const int MAX_UNITS =16; // Tu zmienisz limit dla wszystkich ras na raz
 string[MAX_UNITS] TerranPool;
 
 void initialize_terran () {
-	TerranPool[0]  = "Marine";
+    // Piechota (Koszary)
+    TerranPool[0]  = "Marine";
     TerranPool[1]  = "Marauder";
     TerranPool[2]  = "Reaper";
     TerranPool[3]  = "Ghost";
-	UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("iNICJALIZACJA"));
+
+    // Pojazdy (Fabryka)
+    TerranPool[4]  = "Hellion";
+    TerranPool[5]  = "HellionTank"; // To jest Hellbat (Unit ID w edytorze to HellionTank)
+    TerranPool[6]  = "WidowMine";
+    TerranPool[7]  = "Cyclone";
+    TerranPool[8]  = "SiegeTank";
+    TerranPool[9]  = "Thor";
+
+    // Lotnictwo (Port Gwiezdny)
+    TerranPool[10] = "VikingFighter"; // Postać latająca (Unit ID to VikingFighter)
+    TerranPool[11] = "Medivac";
+    TerranPool[12] = "Liberator";
+    TerranPool[13] = "Banshee";
+    TerranPool[14] = "Raven";
+    TerranPool[15] = "Battlecruiser";
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Inicjalizacja: Załadowano 16 jednostek Terran."));
 }
 

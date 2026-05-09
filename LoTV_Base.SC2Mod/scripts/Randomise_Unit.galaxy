@@ -1,32 +1,54 @@
-// Importujemy dane jednostek
 include "scripts/Initialize_terran_pool"
 
+// 1. NOWA FUNKCJA POMOCNICZA (Robi brudną robotę tylko dla JEDNEGO gracza)
+void RollUnitForPlayer(int p) {
+    int rzut = RandomInt(0, 15);
+
+    TechTreeRestrictionsEnable(p, true);
+    TechTreeUnitAllow(p, TerranPool[rzut], true);
+    
+    // Zapewniamy podstawy bazy
+    TechTreeUnitAllow(p, "MissileTurret", true);
+    TechTreeUpgradeAllow(p, "TerranInfantryWeaponsLevel1", true);
+
+    // Komunikat
+    UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Twoja jednostka to: " + TerranPool[rzut]));
+}
+
+
+// 2. GŁÓWNE LOSOWANIE NA STARCIE GRY (Używa funkcji wyżej dla wszystkich)
 void RandomizeMonobattle() {
-    // Deklarujemy tylko to, czego naprawdę używamy
     playergroup activePlayers = PlayerGroupAll();
-    int p; 
-    int rzut;
+    int p = PlayerGroupNextPlayer(activePlayers, -1);
 
-    // Pobieramy pierwszego gracza z grupy (-1 oznacza start od początku)
-    p = PlayerGroupNextPlayer(activePlayers, -1);
-
-    // Pętla wykonuje się tak długo, aż p osiągnie -1 (brak kolejnych graczy)
     while (p >= 0) {
-        // 1. Losujemy indeks (wykorzystując stałą wielkość tablicy)
-        rzut = RandomInt(0, 3);
-
-        // 2. Logika Monobattle dla konkretnego gracza 'p'
-        TechTreeRestrictionsEnable(p, true);
-        TechTreeUnitAllow(p, TerranPool[rzut], true);
-
-        // Pozwól na turret, orbital command zawsze       
-        TechTreeUnitAllow(p,"MissileTurret", true);
-        TechTreeUpgradeAllow(p,"TerranInfantryWeaponsLevel1",true);
-
-        // Debug/Info: Wiadomość tylko do wylosowanego gracza
-        UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
-
-        // 3. KLUCZOWY MOMENT: Przechodzimy do następnego gracza w grupie
+        RollUnitForPlayer(p); // <-- Wywołujemy logikę dla gracza "p"
         p = PlayerGroupNextPlayer(activePlayers, p);
     }
+}
+
+
+// 3. KOMENDA REROLL (Używa funkcji wyżej tylko dla wpisującego)
+bool CommandReroll (bool testConds, bool runActions) {
+    int p;
+    int i;
+    string msg;
+
+    if (!runActions) { return true; }
+
+    p = EventPlayer(); 
+    msg = EventChatMessage(false);
+
+    if (StringCase(msg, false) == "-reroll") {
+        
+        // Najpierw czyścimy stare uprawnienia (to musi zostać, bo zabieramy starą jednostkę)
+        for (i = 0; i <= 15; i = i + 1) {
+            TechTreeUnitAllow(p, TerranPool[i], false);
+        }
+
+        // Magia! Po prostu znowu wywołujemy funkcję losującą dla wpisującego
+        RollUnitForPlayer(p); 
+    }
+    
+    return true;
 }
