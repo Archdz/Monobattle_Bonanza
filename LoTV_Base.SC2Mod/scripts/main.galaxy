@@ -1,0 +1,6 @@
+
+void main() {
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Script is working."));
+}
+
+

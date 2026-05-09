@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TriggerData>
+    <Library Id="32AF1ADC">
+        <Root>
+            <Item Type="CustomScript" Library="32AF1ADC" Id="0A803417"/>
+        </Root>
+        <Element Type="CustomScript" Id="0A803417">
+            <Identifier>Bootstrap</Identifier>
+            <ScriptCode>
+                include &quot;scripts/main&quot;
+            </ScriptCode>
+            <InitFunc>main</InitFunc>
+        </Element>
+    </Library>
+</TriggerData>
