@@ -15,6 +15,7 @@
         </Element>
         <Element Type="Trigger" Id="DCE9643E">
             <Identifier>Randomize</Identifier>
+            <Disabled/>
             <Event Type="FunctionCall" Library="32AF1ADC" Id="EF29E615"/>
             <Action Type="FunctionCall" Library="32AF1ADC" Id="752286AD"/>
         </Element>
@@ -133,6 +134,7 @@
             <ValueGameType Type="Unit"/>
         </Element>
         <Element Type="Variable" Id="3DDA6780">
+            <Disabled/>
             <VariableType>
                 <Type Value="int"/>
             </VariableType>
@@ -143,6 +145,7 @@
             <ValueType Type="int"/>
         </Element>
         <Element Type="Variable" Id="EFD30413">
+            <Disabled/>
             <VariableType>
                 <Type Value="gamelink"/>
                 <GameType Value="Unit"/>

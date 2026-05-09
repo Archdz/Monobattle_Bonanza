@@ -1,0 +1,28 @@
+// Importujemy dane jednostek
+include "scripts/Initialize_terran_pool"
+
+void RandomizeMonobattle() {
+    // Deklarujemy tylko to, czego naprawdę używamy
+    playergroup activePlayers = PlayerGroupAll();
+    int p; 
+    int rzut;
+
+    // Pobieramy pierwszego gracza z grupy (-1 oznacza start od początku)
+    p = PlayerGroupNextPlayer(activePlayers, -1);
+
+    // Pętla wykonuje się tak długo, aż p osiągnie -1 (brak kolejnych graczy)
+    while (p >= 0) {
+        // 1. Losujemy indeks (wykorzystując stałą wielkość tablicy)
+        rzut = RandomInt(0, 3);
+        
+        // 2. Logika Monobattle dla konkretnego gracza 'p'
+        TechTreeRestrictionsEnable(p, true);
+        TechTreeUnitAllow(p, TerranPool[rzut], true);
+        
+        // Debug/Info: Wiadomość tylko do wylosowanego gracza
+        UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
+
+        // 3. KLUCZOWY MOMENT: Przechodzimy do następnego gracza w grupie
+        p = PlayerGroupNextPlayer(activePlayers, p);
+    }
+}

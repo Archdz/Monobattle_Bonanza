@@ -10,18 +10,6 @@ void lib32AF1ADC_InitLibraries () {
     libNtve_InitVariables();
 }
 
-// Variable Initialization
-bool lib32AF1ADC_InitVariables_completed = false;
-
-void lib32AF1ADC_InitVariables () {
-    if (lib32AF1ADC_InitVariables_completed) {
-        return;
-    }
-
-    lib32AF1ADC_InitVariables_completed = true;
-
-}
-
 // Custom Script
 //--------------------------------------------------------------------------------------------------
 // Custom Script: Bootstrap
@@ -30,43 +18,6 @@ include "scripts/main"
 
 void lib32AF1ADC_InitCustomScript () {
     main();
-}
-
-// Triggers
-//--------------------------------------------------------------------------------------------------
-// Trigger: Untitled Trigger 001
-//--------------------------------------------------------------------------------------------------
-bool lib32AF1ADC_gt_Randomize_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    playergroup auto752286AD_g;
-    int auto752286AD_var;
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    auto752286AD_g = PlayerGroupAll();
-    auto752286AD_var = -1;
-    while (true) {
-        auto752286AD_var = PlayerGroupNextPlayer(auto752286AD_g, auto752286AD_var);
-        if (auto752286AD_var < 0) { break; }
-        lib32AF1ADC_gv_rzut2 = RandomInt(0, 3);
-        TechTreeRestrictionsEnable(auto752286AD_var, true);
-        TechTreeUnitAllow(auto752286AD_var, lib32AF1ADC_gv_terranUnits[lib32AF1ADC_gv_rzut2], true);
-        TechTreeUnitAllow(auto752286AD_var, "MissileTurret", true);
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib32AF1ADC_gt_Randomize_Init () {
-    lib32AF1ADC_gt_Randomize = TriggerCreate("lib32AF1ADC_gt_Randomize_Func");
-    TriggerAddEventMapInit(lib32AF1ADC_gt_Randomize);
-}
-
-void lib32AF1ADC_InitTriggers () {
-    lib32AF1ADC_gt_Randomize_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -82,8 +33,6 @@ void lib32AF1ADC_InitLib () {
     lib32AF1ADC_InitLib_completed = true;
 
     lib32AF1ADC_InitLibraries();
-    lib32AF1ADC_InitVariables();
     lib32AF1ADC_InitCustomScript();
-    lib32AF1ADC_InitTriggers();
 }
 

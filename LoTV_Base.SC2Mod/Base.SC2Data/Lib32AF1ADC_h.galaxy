@@ -3,13 +3,4 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: Library
 //--------------------------------------------------------------------------------------------------
-// Variable Declarations
-int lib32AF1ADC_gv_rzut2;
-string[5] lib32AF1ADC_gv_terranUnits;
-
-// Trigger Declarations
-trigger lib32AF1ADC_gt_Randomize;
-
-// Library Initialization
-void lib32AF1ADC_InitVariables ();
 

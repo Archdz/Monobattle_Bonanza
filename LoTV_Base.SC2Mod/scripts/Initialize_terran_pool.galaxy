@@ -1,7 +1,11 @@
+const int MAX_UNITS =4; // Tu zmienisz limit dla wszystkich ras na raz
+string[MAX_UNITS] TerranPool;
+
 void initialize_terran () {
-	lib32AF1ADC_gv_terranUnits[0]  = "Marine";
-    lib32AF1ADC_gv_terranUnits[1]  = "Marauder";
-    lib32AF1ADC_gv_terranUnits[2]  = "Reaper";
-    lib32AF1ADC_gv_terranUnits[3]  = "Ghost";
+	TerranPool[0]  = "Marine";
+    TerranPool[1]  = "Marauder";
+    TerranPool[2]  = "Reaper";
+    TerranPool[3]  = "Ghost";
 	UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("iNICJALIZACJA"));
 }
+

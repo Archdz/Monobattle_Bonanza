@@ -1,7 +1,8 @@
 include "scripts/Initialize_terran_pool"
-
+include "scripts/Randomise_Unit"
 void main() {
     initialize_terran ();
+    RandomizeMonobattle();
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Script is working."));
 }
 
