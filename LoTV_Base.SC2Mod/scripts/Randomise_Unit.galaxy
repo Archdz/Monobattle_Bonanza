@@ -1,53 +1,56 @@
 include "scripts/Initialize_terran_pool"
 
-// 1. NOWA FUNKCJA POMOCNICZA (Robi brudną robotę tylko dla JEDNEGO gracza)
-void RollUnitForPlayer(int p) {
-    int rzut = RandomInt(0, 15);
-
-    TechTreeRestrictionsEnable(p, true);
-    TechTreeUnitAllow(p, TerranPool[rzut], true);
-    
-    // Zapewniamy podstawy bazy
-    TechTreeUnitAllow(p, "MissileTurret", true);
-    TechTreeUpgradeAllow(p, "TerranInfantryWeaponsLevel1", true);
-
-    // Komunikat
-    UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Twoja jednostka to: " + TerranPool[rzut]));
-}
-
-
-// 2. GŁÓWNE LOSOWANIE NA STARCIE GRY (Używa funkcji wyżej dla wszystkich)
 void RandomizeMonobattle() {
     playergroup activePlayers = PlayerGroupAll();
-    int p = PlayerGroupNextPlayer(activePlayers, -1);
+    int p; 
+    int rzut;
+
+    p = PlayerGroupNextPlayer(activePlayers, -1);
 
     while (p >= 0) {
-        RollUnitForPlayer(p); // <-- Wywołujemy logikę dla gracza "p"
+        rzut = RandomInt(0, 15);
+        rzut=1;
+        TechTreeRestrictionsEnable(p, true);
+        TechTreeUnitAllow(p, TerranPool[rzut], true);
+      
+        TechTreeUnitAllow(p, "MissileTurret", true);
+        TechTreeUpgradeAllow(p, "TerranInfantryWeaponsLevel1", true);
+        TechTreeUnitAllow(p,"SCV",true);
+        UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
+
         p = PlayerGroupNextPlayer(activePlayers, p);
     }
 }
 
-
-// 3. KOMENDA REROLL (Używa funkcji wyżej tylko dla wpisującego)
 bool CommandReroll (bool testConds, bool runActions) {
     int p;
+    int rzut;
     int i;
     string msg;
 
-    if (!runActions) { return true; }
+
+    if (!runActions) {
+        return true;
+    }
 
     p = EventPlayer(); 
     msg = EventChatMessage(false);
 
+   
     if (StringCase(msg, false) == "-reroll") {
         
-        // Najpierw czyścimy stare uprawnienia (to musi zostać, bo zabieramy starą jednostkę)
+
         for (i = 0; i <= 15; i = i + 1) {
             TechTreeUnitAllow(p, TerranPool[i], false);
         }
 
-        // Magia! Po prostu znowu wywołujemy funkcję losującą dla wpisującego
-        RollUnitForPlayer(p); 
+       
+        rzut = RandomInt(0, 15);
+        TechTreeUnitAllow(p, TerranPool[rzut], true);
+
+
+        UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, 
+            StringToText("Przelosowano! Twoja nowa jednostka: " + TerranPool[rzut]));
     }
     
     return true;

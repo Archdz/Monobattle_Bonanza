@@ -8,6 +8,7 @@
         </Root>
         <Element Type="Trigger" Id="D995B985">
             <Identifier>Testing_cheats</Identifier>
+            <Disabled/>
             <Event Type="FunctionCall" Library="32AF1ADC" Id="109E3CCD"/>
             <Action Type="FunctionCall" Library="32AF1ADC" Id="CBC77FD5"/>
         </Element>

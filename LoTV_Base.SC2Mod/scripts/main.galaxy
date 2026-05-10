@@ -1,16 +1,17 @@
-include "scripts/Initialize_terran_pool"
 include "scripts/Randomise_Unit"
+
 void main() {
-
+    
     trigger t;
+    int i;
 
-    initialize_terran ();
-    Wait(1, c_timeGame);
+    initialize_terran();
     RandomizeMonobattle();
 
+    // Tworzymy wyzwalacz dla komendy
     t = TriggerCreate("CommandReroll");
-    
+
+
     TriggerAddEventChatMessage(t, c_playerAny, "-reroll", false);
 }
-
 
