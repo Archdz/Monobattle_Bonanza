@@ -2,13 +2,28 @@ include "scripts/Initialize_terran_pool"
 
 
 void RandomizeTerranMelee(int p){
-    int rzut = RandomInt(0, 15);
-    rzut=6;
+    int rzut;
+    int words;
+    int w;
+    string upg;
+    rzut=RandomInt(0, 14);
+    rzut=4;
+    //rzut=13;
     TechTreeUnitAllow(p, TerranPool[rzut], true);
     UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
 
-}
+    w = 1;
+    upg = StringWord(TerranUpgradesPool[rzut], w); // Pobieramy pierwsze słowo
+    
+    // Pętla kręci się tak długo, dopóki wyciągamy z tablicy jakiś sensowny tekst
+    while (upg != "" && upg != " ") {
+        TechTreeUpgradeAllow(p, upg, true);
+        UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Ulepszenie: " + upg));
+        w = w + 1; // Zwiększamy indeks słowa
+        upg = StringWord(TerranUpgradesPool[rzut], w); // Pobieramy kolejne słowo na następne okrążenie
+    }
 
+}
 
 
 
@@ -63,3 +78,4 @@ bool CommandReroll (bool testConds, bool runActions) {
     
     return true;
 }
+
