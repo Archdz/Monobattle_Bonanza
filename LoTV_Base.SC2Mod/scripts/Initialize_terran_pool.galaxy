@@ -19,7 +19,7 @@ void initialize_terran () {
     TerranPool[5]  = "WidowMine";
     TerranUpgradesPool[5]="DrillClaws";
     TerranPool[6]  = "Cyclone";
-    TerranUpgradesPool[6]=" ";
+    TerranUpgradesPool[6]="CycloneLockOnDamageUpgrade";
     TerranPool[7]  = "SiegeTank";
     TerranUpgradesPool[7]=" ";
     TerranPool[8]  = "Thor";
@@ -30,11 +30,11 @@ void initialize_terran () {
     TerranPool[10] = "Medivac";
     TerranUpgradesPool[10]="MedivacCaduceusReactor";
     TerranPool[11] = "Liberator";
-    TerranUpgradesPool[11]=" ";
+    TerranUpgradesPool[11]="LiberatorAGRangeUpgrade";
     TerranPool[12] = "Banshee";
-    TerranUpgradesPool[12]="BansheeCloak";
+    TerranUpgradesPool[12]="BansheeCloak BansheeSpeed";
     TerranPool[13] = "Raven";
-    TerranUpgradesPool[13]="HiSecAutoTracking";
+    TerranUpgradesPool[13]="HiSecAutoTracking InterferenceMatrix";
     TerranPool[14] = "Battlecruiser";
     TerranUpgradesPool[14]="BattlecruiserEnableSpecializations";
 
