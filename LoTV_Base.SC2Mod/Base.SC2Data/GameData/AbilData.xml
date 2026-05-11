@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilResearch id="FactoryTechLabResearch">
+        <InfoArray index="Research5">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research6">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research7">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research9">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research10">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research11">
+            <Button State="Restricted"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilTrain id="FactoryTrain">
         <InfoArray index="Train7">
             <Button State="Restricted"/>
@@ -11,6 +31,26 @@
             <Button State="Restricted" Requirements="HaveFactory"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilResearch id="StarportTechLabResearch">
+        <InfoArray index="Research10">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research11">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research14">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research15">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research16">
+            <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research18">
+            <Button State="Restricted"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilTrain id="StarportTrain">
         <InfoArray index="Train7">
             <Button State="Restricted" Requirements="HaveStarport"/>

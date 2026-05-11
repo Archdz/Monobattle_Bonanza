@@ -3,7 +3,7 @@ include "scripts/Initialize_terran_pool"
 
 void RandomizeTerranMelee(int p){
     int rzut = RandomInt(0, 15);
-    //rzut=13;
+    rzut=6;
     TechTreeUnitAllow(p, TerranPool[rzut], true);
     UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
 
