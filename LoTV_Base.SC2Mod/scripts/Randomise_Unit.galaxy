@@ -7,7 +7,7 @@ void RandomizeTerranMelee(int p){
     int w;
     string upg;
     rzut=RandomInt(0, 14);
-    rzut=4;
+    rzut=1;
     //rzut=13;
     TechTreeUnitAllow(p, TerranPool[rzut], true);
     UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
@@ -20,6 +20,8 @@ void RandomizeTerranMelee(int p){
         TechTreeUpgradeAllow(p, upg, true);
         UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Ulepszenie: " + upg));
         w = w + 1; // Zwiększamy indeks słowa
+        //TechTreeUpgradeAddLevel(p, upg, 1);
+
         upg = StringWord(TerranUpgradesPool[rzut], w); // Pobieramy kolejne słowo na następne okrążenie
     }
 

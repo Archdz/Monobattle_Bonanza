@@ -15,7 +15,7 @@ void initialize_terran () {
     TerranUpgradesPool[3]="PersonalCloaking";
     // Pojazdy (Fabryka)
     TerranPool[4]  = "Hellion";
-    TerranUpgradesPool[4]="HighCapacityBarrels TransformationServos";
+    TerranUpgradesPool[4]="HighCapacityBarrels SmartServos";
     TerranPool[5]  = "WidowMine";
     TerranUpgradesPool[5]="DrillClaws";
     TerranPool[6]  = "Cyclone";
@@ -23,10 +23,10 @@ void initialize_terran () {
     TerranPool[7]  = "SiegeTank";
     TerranUpgradesPool[7]=" ";
     TerranPool[8]  = "Thor";
-    TerranUpgradesPool[8]="TransformationServos";
+    TerranUpgradesPool[8]="SmartServos";
     // Lotnictwo (Port Gwiezdny)
     TerranPool[9] = "VikingFighter"; // Postać latająca (Unit ID to VikingFighter)
-    TerranUpgradesPool[9]="TransformationServos";
+    TerranUpgradesPool[9]="SmartServos";
     TerranPool[10] = "Medivac";
     TerranUpgradesPool[10]="MedivacCaduceusReactor";
     TerranPool[11] = "Liberator";

@@ -1,1 +1,2 @@
 ﻿Unit/EditorSuffix/HellionTank=(Battle Mode)
+Unit/EditorSuffix/VikingAssault=(Assault Mode)
