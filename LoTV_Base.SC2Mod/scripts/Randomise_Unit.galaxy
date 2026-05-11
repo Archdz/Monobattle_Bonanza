@@ -1,6 +1,7 @@
 include "scripts/Initialize_terran_pool"
 
 void RandomizeMonobattle() {
+
     playergroup activePlayers = PlayerGroupAll();
     int p; 
     int rzut;
@@ -9,17 +10,22 @@ void RandomizeMonobattle() {
 
     while (p >= 0) {
         rzut = RandomInt(0, 15);
-        rzut=1;
+        rzut=12;
         TechTreeRestrictionsEnable(p, true);
         TechTreeUnitAllow(p, TerranPool[rzut], true);
       
+        TechTreeUnitAllow(p, "Factory", true);
+
         TechTreeUnitAllow(p, "MissileTurret", true);
         TechTreeUpgradeAllow(p, "TerranInfantryWeaponsLevel1", true);
         TechTreeUnitAllow(p,"SCV",true);
         UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
 
         p = PlayerGroupNextPlayer(activePlayers, p);
+
     }
+
+ 
 }
 
 bool CommandReroll (bool testConds, bool runActions) {

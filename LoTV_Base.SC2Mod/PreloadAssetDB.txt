@@ -1,3 +1,11 @@
+[Abil]
+id=FactoryTrain
+asset=Assets\Textures\WayPointLine.dds
+asset=Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3
+Actor=CommandUIHarnessAttackProtoss,CommandUIHarnessAttackTerran,CommandUIHarnessAttackZerg,CommandUIHarnessConfirmProtoss,CommandUIHarnessConfirmTerran,CommandUIHarnessConfirmZerg,CommandUIHarnessMoveProtoss,CommandUIHarnessMoveTerran,CommandUIHarnessMoveZerg,CommandUIHarnessRallyProtoss,CommandUIHarnessRallyTerran,CommandUIHarnessRallyZerg,TerrainMgr
+Alert=TrainComplete,TrainError
+Unit=Cyclone,Hellion,HellionTank,SiegeTank,Thor,WidowMine
+
 [Game]
 id=Dflt
 Abil=LoadOutSpray,stop
@@ -8,13 +16,6 @@ Effect=SplashDamage
 Race=Prot,Terr,Zerg
 Sound=Zerg_CreepDecay,Zerg_CreepGrow
 Unit=BeaconArmy,BeaconAttack,BeaconAuto,BeaconClaim,BeaconCustom1,BeaconCustom2,BeaconCustom3,BeaconCustom4,BeaconDefend,BeaconDetect,BeaconExpand,BeaconHarass,BeaconIdle,BeaconRally,BeaconScout
-
-[Unit]
-id=Adept
-Abil=##id##PhaseShift,##id##PhaseShiftCancel,ProgressRally,Warpable,attack,move,stop
-Actor=##id##,##id##_Death,BlipVisual,CommandUIHarnessAttackProtoss,CommandUIHarnessAttackTerran,CommandUIHarnessAttackZerg,CommandUIHarnessConfirmProtoss,CommandUIHarnessConfirmTerran,CommandUIHarnessConfirmZerg,CommandUIHarnessMoveProtoss,CommandUIHarnessMoveTerran,CommandUIHarnessMoveZerg,CommandUIHarnessRallyProtoss,CommandUIHarnessRallyTerran,CommandUIHarnessRallyZerg,ConfirmationLocalAirAttack,ConfirmationLocalGroundAttack,ConfirmationSyncAirAttack,ConfirmationSyncGroundAttack,ConstructionRefundTextAlly,ConstructionRefundTextEnemy,FlyerShadow,GroundShadow,SalvagedTextAlly,SalvagedTextEnemy,ShieldImpact,TerrainMgr,UnitPointsTextAll
-Button=##id##PhaseShift,Attack,Cancel,Move,MoveHoldPosition,MovePatrol,Rally,Stop
-Weapon
 
 [Upgrade]
 id=PriviligeDefault
