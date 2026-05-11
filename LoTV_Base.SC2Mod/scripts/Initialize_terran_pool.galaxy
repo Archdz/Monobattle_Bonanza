@@ -1,28 +1,42 @@
 const int MAX_UNITS =16; // Tu zmienisz limit dla wszystkich ras na raz
+
 string[MAX_UNITS] TerranPool;
+string[MAX_UNITS] TerranUpgradesPool;
 
 void initialize_terran () {
     // Piechota (Koszary)
     TerranPool[0]  = "Marine";
+    TerranUpgradesPool[0]="ShieldWall Stimpack";
     TerranPool[1]  = "Marauder";
+    TerranUpgradesPool[1]="PunisherGrenades Stimpack";
     TerranPool[2]  = "Reaper";
+    TerranUpgradesPool[2]=" ";
     TerranPool[3]  = "Ghost";
-
+    TerranUpgradesPool[3]="PersonalCloaking";
     // Pojazdy (Fabryka)
     TerranPool[4]  = "Hellion";
-    TerranPool[5]  = "HellionTank"; // To jest Hellbat (Unit ID w edytorze to HellionTank)
-    TerranPool[6]  = "WidowMine";
-    TerranPool[7]  = "Cyclone";
-    TerranPool[8]  = "SiegeTank";
-    TerranPool[9]  = "Thor";
-
+    TerranUpgradesPool[4]="HighCapacityBarrels TransformationServos";
+    TerranPool[5]  = "WidowMine";
+    TerranUpgradesPool[5]="DrillClaws";
+    TerranPool[6]  = "Cyclone";
+    TerranUpgradesPool[6]=" ";
+    TerranPool[7]  = "SiegeTank";
+    TerranUpgradesPool[7]=" ";
+    TerranPool[8]  = "Thor";
+    TerranUpgradesPool[8]="TransformationServos";
     // Lotnictwo (Port Gwiezdny)
-    TerranPool[10] = "VikingFighter"; // Postać latająca (Unit ID to VikingFighter)
-    TerranPool[11] = "Medivac";
-    TerranPool[12] = "Liberator";
-    TerranPool[13] = "Banshee";
-    TerranPool[14] = "Raven";
-    TerranPool[15] = "Battlecruiser";
+    TerranPool[9] = "VikingFighter"; // Postać latająca (Unit ID to VikingFighter)
+    TerranUpgradesPool[9]="TransformationServos";
+    TerranPool[10] = "Medivac";
+    TerranUpgradesPool[10]="MedivacCaduceusReactor";
+    TerranPool[11] = "Liberator";
+    TerranUpgradesPool[11]=" ";
+    TerranPool[12] = "Banshee";
+    TerranUpgradesPool[12]="BansheeCloak";
+    TerranPool[13] = "Raven";
+    TerranUpgradesPool[13]="HiSecAutoTracking";
+    TerranPool[14] = "Battlecruiser";
+    TerranUpgradesPool[14]="BattlecruiserEnableSpecializations";
 
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Inicjalizacja: Załadowano 16 jednostek Terran."));
 }
