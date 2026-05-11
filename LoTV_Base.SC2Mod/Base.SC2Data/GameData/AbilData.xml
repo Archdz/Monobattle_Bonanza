@@ -11,4 +11,9 @@
             <Button State="Restricted" Requirements="HaveFactory"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilTrain id="StarportTrain">
+        <InfoArray index="Train7">
+            <Button State="Restricted" Requirements="HaveStarport"/>
+        </InfoArray>
+    </CAbilTrain>
 </Catalog>

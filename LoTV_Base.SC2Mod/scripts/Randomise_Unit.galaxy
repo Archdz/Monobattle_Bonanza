@@ -10,7 +10,7 @@ void RandomizeMonobattle() {
 
     while (p >= 0) {
         rzut = RandomInt(0, 15);
-        rzut=12;
+        rzut=13;
         TechTreeRestrictionsEnable(p, true);
         TechTreeUnitAllow(p, TerranPool[rzut], true);
       
