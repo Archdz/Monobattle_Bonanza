@@ -1,1 +1,2 @@
-﻿Unit/EditorSuffix/HellionTank=(Battle Mode)
+﻿RequirementNode/Name/NotAllowUnitMarine=!AllowUnit(Marine)
+Unit/EditorSuffix/HellionTank=(Battle Mode)

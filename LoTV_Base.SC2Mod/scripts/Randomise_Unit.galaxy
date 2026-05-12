@@ -2,8 +2,8 @@ include "scripts/Initialize_terran_pool"
 
 
 void RandomizeTerranMelee(int p){
-    int rzut = RandomInt(0, 15);
-    rzut=6;
+    int rzut = RandomInt(0, 14);
+    rzut=1;
     TechTreeUnitAllow(p, TerranPool[rzut], true);
     UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
 
@@ -28,6 +28,10 @@ void RandomizeMonobattle() {
         TechTreeUnitAllow(p,"SCV",true);
         
         RandomizeTerranMelee(p);
+
+
+        TechTreeUpgradeAllow(p,"PunisherGrenades",true);
+        TechTreeUpgradeAllow(p,"Stimpack",true);
 
         p = PlayerGroupNextPlayer(activePlayers, p);
 

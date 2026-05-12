@@ -1,4 +1,4 @@
-const int MAX_UNITS =16; // Tu zmienisz limit dla wszystkich ras na raz
+const int MAX_UNITS =15; // Tu zmienisz limit dla wszystkich ras na raz
 
 string[MAX_UNITS] TerranPool;
 string[MAX_UNITS] TerranUpgradesPool;
@@ -14,7 +14,7 @@ void initialize_terran () {
     TerranPool[3]  = "Ghost";
     TerranUpgradesPool[3]="PersonalCloaking";
     // Pojazdy (Fabryka)
-    TerranPool[4]  = "Hellion";
+    TerranPool[4]  = "Hellion"; 
     TerranUpgradesPool[4]="HighCapacityBarrels TransformationServos";
     TerranPool[5]  = "WidowMine";
     TerranUpgradesPool[5]="DrillClaws";
@@ -38,6 +38,6 @@ void initialize_terran () {
     TerranPool[14] = "Battlecruiser";
     TerranUpgradesPool[14]="BattlecruiserEnableSpecializations";
 
-    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Inicjalizacja: Załadowano 16 jednostek Terran."));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringToText("Inicjalizacja: Załadowano 15 jednostek Terran."));
 }
 
