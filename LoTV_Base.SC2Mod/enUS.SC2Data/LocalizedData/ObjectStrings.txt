@@ -1,2 +1,4 @@
-﻿RequirementNode/Name/NotAllowUnitMarine=!AllowUnit(Marine)
+﻿RequirementNode/Name/AndCountUnitArmoryCompleteOnlyEqCountUpgradeTerranVehicleAndShipArmorsLevel1QueuedOrBetter0=CountUnit(Armory,CompleteOnly) && CountUpgrade(TerranVehicleAndShipArmorsLevel1,QueuedOrBetter) == 0
+RequirementNode/Name/NotAllowUnitMarine=!AllowUnit(Marine)
 Unit/EditorSuffix/HellionTank=(Battle Mode)
+Unit/EditorSuffix/StarportReactor=(Starport)

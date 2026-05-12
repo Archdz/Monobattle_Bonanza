@@ -5,7 +5,7 @@ void RandomizeTerranMelee(int p){
     int rzut = RandomInt(0, 14);
     int w;
     string upg;
-    rzut=1;
+    rzut=9;
     TechTreeUnitAllow(p, TerranPool[rzut], true);
     UIDisplayMessage(PlayerGroupSingle(p), c_messageAreaChat, StringToText("Wylosowano: " + TerranPool[rzut]));
 
@@ -33,9 +33,17 @@ void RandomizeTerranMelee(int p){
         TechTreeUpgradeAllow(p, "TerranVehicleAndShipArmorsLevel1",true);
         TechTreeUpgradeAllow(p, "TerranVehicleAndShipArmorsLevel2",true);
         TechTreeUpgradeAllow(p, "TerranVehicleAndShipArmorsLevel3",true);
-        TechTreeUpgradeAllow(p, "TerranVehicleAndShipWeaponsLevel1",true);
-        TechTreeUpgradeAllow(p, "TerranVehicleAndShipWeaponsLevel2",true);
-        TechTreeUpgradeAllow(p, "TerranVehicleAndShipWeaponsLevel3",true);
+        TechTreeUnitAllow(p, "Armory",true);
+        if (rzut<9){
+            TechTreeUpgradeAllow(p, "TerranVehicleWeaponsLevel1",true);
+            TechTreeUpgradeAllow(p, "TerranVehicleWeaponsLevel2",true);
+            TechTreeUpgradeAllow(p, "TerranVehicleWeaponsLevel3",true);
+        }
+        else {
+            TechTreeUpgradeAllow(p, "TerranShipWeaponsLevel1",true);
+            TechTreeUpgradeAllow(p, "TerranShipWeaponsLevel2",true);
+            TechTreeUpgradeAllow(p, "TerranShipWeaponsLevel3",true);
+        }
         
     }
 }
@@ -59,7 +67,9 @@ void RandomizeMonobattle() {
         TechTreeUnitAllow(p, "OrbitalCommand", true);
         TechTreeUnitAllow(p, "PlanetaryFortress", true);
         TechTreeUnitAllow(p, "SensorTower", true);
-        
+        TechTreeUnitAllow(p, "BarracksReactor", true);
+        TechTreeUnitAllow(p, "FactoryReactor", true);
+        TechTreeUnitAllow(p, "StarportReactor", true);
         RandomizeTerranMelee(p);
 
 

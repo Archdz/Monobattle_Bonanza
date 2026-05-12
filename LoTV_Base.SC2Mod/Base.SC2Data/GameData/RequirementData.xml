@@ -3,4 +3,7 @@
     <CRequirement id="LearnStimpack">
         <NodeArray index="Show" Link="NotCountUpgradeStimpackQueuedOrBetter"/>
     </CRequirement>
+    <CRequirement id="LearnTerranVehicleAndShipArmor1">
+        <NodeArray index="Show" Link="AndCountUnitArmoryCompleteOnlyEqCountUpgradeTerranVehicleAndShipArmorsLevel1QueuedOrBetter0"/>
+    </CRequirement>
 </Catalog>

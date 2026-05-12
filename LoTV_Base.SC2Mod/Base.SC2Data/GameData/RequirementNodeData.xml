@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAnd id="AndCountUnitArmoryCompleteOnlyEqCountUpgradeTerranVehicleAndShipArmorsLevel1QueuedOrBetter0">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitArmoryCompleteOnly"/>
+        <OperandArray value="EqCountUpgradeTerranVehicleAndShipArmorsLevel1QueuedOrBetter0"/>
+    </CRequirementAnd>
+</Catalog>
